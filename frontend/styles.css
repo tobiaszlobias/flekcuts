@@ -1,0 +1,81 @@
+@import url("var2.css");
+
+body {
+    margin: 0;
+    background-color: var(--mane-background-color);
+}
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+#home {
+    float: left;
+}
+.button {
+  float: right;
+  text-align: center;
+}
+  #purchase {
+  text-decoration: none;
+  color: var(--purchase-text-color);
+  text-align: center;
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  background-color:var(--navbar-background-color);
+  color: white;
+  padding: 10px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.navbar a {
+  display: block;
+  color: var(--text-color);
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.navbar a:hover {
+  color: var(--text-color-hover);
+}
+
+.promo {
+    background-color: var(--mane-background-color);
+    color: var(--mane-text-color);
+    padding: px;
+    float : left;
+    width: 20%;
+    font-style: inherit;
+}
+
+.footer {
+    background-color: var(--footer-background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.page-section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+    .promo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,62 @@
+<!--add more pages + enable scrolling through them
+TODO:  
+    enhance the style of each section 
+    add the content to each section
+    add the content to the footer
+    improve the navbar
+    add the content to the promo section
+    add pretty colors
+    add icons for navbar
+    and so on...
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlekCuts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#flekcuts" id="home">FlekCuts</a></li>
+        <li><a href="#objednat" class="button">objednat</a></li>
+        <li><a href="#sluzby" class="button">služby</a></li>
+        <li><a href="#kontakt" class="button">kontakt</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="flekcuts" class="page-section">
+        <aside class="promo">
+          <h1>
+            zase to přerostlo?<br />
+
+            <button onclick="location.href='#objednat'" id="purchase">
+              objednej se
+            </button>
+          </h1>
+        </aside>
+      </section>
+      <section id="objednat" class="page-section">
+        Objednat
+        <form action="book.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="date" name="date" required />
+          <input type="time" name="time" required />
+          <button type="submit">Book Now</button>
+        </form>
+      </section>
+
+      <section id="sluzby" class="page-section">Služby</section>
+      <section id="kontakt" class="page-section">Kontakt</section>
+    </main>
+
+    <footer class="footer">
+      <h2>footer</h2>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
