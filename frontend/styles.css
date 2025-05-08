@@ -1,45 +1,48 @@
 @import url("var2.css");
 
 body {
-    margin: 0;
-    background-color: var(--mane-background-color);
+  margin: 0;
+  background-color: var(--mane-background-color);
+  font-family: "Poppins", sans-serif;
 }
 main {
-    margin-left: 20px;
-    margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-
 #home {
-    float: left;
+  float: left;
 }
 .button {
   float: right;
   text-align: center;
 }
-  #purchase {
-  text-decoration: none;
-  color: var(--purchase-text-color);
-  text-align: center;
-}
-
 
 .navbar ul {
   list-style-type: none;
-  background-color:var(--navbar-background-color);
+  background-color: var(--navbar-background-color);
   color: white;
   padding: 10px;
   margin: 0;
   overflow: hidden;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .navbar a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-color);
-  padding: 10px;
+  padding:10px;
   text-decoration: none;
-  text-align: center;
-
+  text-align: justify;
+  font-weight:bold;
 }
 
 .navbar a:hover {
@@ -47,25 +50,26 @@ main {
 }
 
 .promo {
-    background-color: var(--mane-background-color);
-    color: var(--mane-text-color);
-    padding: px;
-    float : left;
-    width: 20%;
-    font-style: inherit;
+  background-color: var(--mane-background-color);
+  color: var(--mane-text-color);
+  padding: px;
+  float: left;
+  width: 20%;
+  font-style: inherit;
 }
 
 .footer {
-    background-color: var(--footer-background-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
+  background-color: var(--footer-background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
 }
 
 .page-section {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0 10px;
   scroll-snap-align: start;
 }
 
@@ -73,9 +77,141 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  padding-right:2rem;
+}
+#services {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 100%;
+}
+.service-item {
+  flex: 1 1 15rem;
+  max-width: 100%;
+  height: 3rem;
+  padding: 15px;
+  height: auto;
+  min-height: 50px;
+  max-height: 200px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  color:#ffffff;
+}
+
+.service-item:hover {
+  transform: scale(1.03);
+}
+
+h1 {
+  font-size:calc(var(--font-base-size) * 3);
+  margin: 10rem 8rem;
+  color: var(--mane-text-color);
+  white-space: nowrap;
+}
+#purchase {
+  text-decoration: none;
+  color: var(--purchase-text-color);
+  background-color: var(--button-background-color);
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: rgb(7, 8, 8);
+  color: var(--purchase-text-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--font-base-size) * 1.2);
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+#purchase:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px #444444c8;
+}
+
+h2 {
+  font-size: calc(var(--font-base-size) * 2);
+  color: var(--mane-text-color);
+  margin-left: 8rem;
+}
+
+.input-bookin {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  margin-left: 8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
+
+  &:focus {
+    border-color: var(--button-background-color);
+    box-shadow: 0 0 5px var(--button-background-color);
+    outline: none;
+  }
+
+  &:hover {
+    border-color: var(--button-background-color);
+    box-shadow: 0 0 5px var(--button-background-color);
+  }
+}
+
+.button-bookin {
+  display: inline-block;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left:8rem;
+
+  &:hover {
+    background-color: var(--button-hover-background-color);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 @media (max-width: 600px) {
-    .promo {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+  .promo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-item {
+    flex: 1 1 100%;
+  }
 }

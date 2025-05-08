@@ -1,14 +1,20 @@
 :root {
-    --navbar-background-color:  #91918f;
-    --text-color:rgb(231, 231, 231);
-    --mane-text-color: #23150E;
-    --text-color-hover:#ffffff;
-    --mane-background-color:#ffffff;
-    --footer-background-color:#91918f;
-    --purchase-text-color:#9E1816;
-    
+    --navbar-background-color:  #000000;
+    --text-color:#ffffff;
+    --mane-text-color: #ffffff;
+    --text-color-hover:#d2d2d2;
+    --mane-background-color:#000000;
+    --footer-background-color:#000000;
+    --purchase-text-color:#ffffff;
+    --navbar-height: 3.8rem;  
+    --font-base-size: 1.618rem;
+    --button-background-color: #83a5d2;
+    --button-hover-background-color: #e093cc;
+    --button-text-color: #ffffff;
+    --background-color-service-item:#000000;
 }
 /* purchase collor #9E1816 */
 /* promo text collor #D9AB60 */
 /* text collor #23150E */
 /* background collor #FFF9EB */
+/*#e30b5d*/
